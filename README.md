@@ -1,4 +1,4 @@
-# SkyQRDecoder
+# SkyQRParser
 
 ## 非官方声明
 

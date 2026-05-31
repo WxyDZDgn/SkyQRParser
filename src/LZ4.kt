@@ -46,6 +46,7 @@ open class LZ4 {
             // token and olb
             var length = hi
             i += 1
+            if(i >= n) break
             if(hi == 15) {
                 // olb
                 val (idx, extra) = getAdvance(i)
@@ -55,6 +56,7 @@ open class LZ4 {
             sb.append(s.subSequence(i, i + length))
             i += length
             // offset
+            if(i >= n) break
             val loByte = s[i].code and 255
             if(i + 1 >= n) break
             val hiByte = s[i + 1].code and 255
